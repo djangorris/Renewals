@@ -39,4 +39,4 @@ OMF_2018_rates_final <- mutate(OMF_2018_rates_clean, EE_Portion1 = as.numeric(fo
        Plan4, Full_EE_Premium4, EE_Portion4, Employer_Portion4, Dependents4, Family_Portion4, Total4,
        Plan5, Full_EE_Premium5, EE_Portion5, Employer_Portion5, Dependents5, Family_Portion5, Total5) %>%
   glimpse() %>%
-  View()
+  write_csv(path = "OMF/OMF_2018_rates_final.csv")
