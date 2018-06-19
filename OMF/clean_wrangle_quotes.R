@@ -40,3 +40,12 @@ OMF_2018_rates_final <- mutate(OMF_2018_rates_clean, EE_Portion1 = as.numeric(fo
        Plan5, Full_EE_Premium5, EE_Portion5, Employer_Portion5, Dependents5, Family_Portion5, Total5) %>%
   glimpse() %>%
   write_csv(path = "OMF/OMF_2018_rates_final.csv")
+
+######
+######
+
+glimpse(OMF_rates)
+
+OMF_rates_2$Plan <- str_replace(OMF_rates_2$Plan, "KP CO", "Kaiser")
+
+OMF_rates_3$Carrier <- word(OMF_rates_3$Plan, 1)
