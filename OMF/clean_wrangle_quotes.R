@@ -45,7 +45,7 @@ OMF_2018_rates_final <- mutate(OMF_2018_rates_clean, EE_Portion1 = as.numeric(fo
 ######
 
 glimpse(OMF_rates)
-
+# replace "KP CO" with "Kaiser"
 OMF_rates_2$Plan <- str_replace(OMF_rates_2$Plan, "KP CO", "Kaiser")
-
+# Make new "Carrier" column to color the bars
 OMF_rates_3$Carrier <- word(OMF_rates_3$Plan, 1)
